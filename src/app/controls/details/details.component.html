@@ -1,0 +1,111 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{ title }}</h4>
+  <button
+    type="button"
+    class="close"
+    aria-label="Close"
+    (click)="activeModal.close()"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="modal-body container-fluid">
+  <div class="row details-row">
+    <div class="col-3 details-header">
+      <span>AccountName</span>
+      <input type="text" [(ngModel)]="item && item.accountName" />
+    </div>
+    <div class="col-3 details-header">
+      <span>Sales</span>
+      <input type="text" [(ngModel)]="item && item.sales" />
+    </div>
+    <div class="col-3 details-header">
+      <span>Description</span>
+      <input type="text" [(ngModel)]="item && item.description" />
+    </div>
+    <div class="col-3 details-header">
+      <span>Trade Date</span>
+      <input type="date" [(ngModel)]="item && item.tradeDate" />
+    </div>
+  </div>
+
+  <div class="row details-row">
+    <div class="col-3 details-header">
+      <span>Citi B/S</span>
+      <input type="text" [(ngModel)]="item && item.citiBuySell" />
+    </div>
+    <div class="col-3 details-header">
+      <span>Size</span>
+      <input type="number" [(ngModel)]="item && item.size" />
+    </div>
+    <div class="col-3 details-header">
+      <span>Price</span>
+      <input type="number" [(ngModel)]="item && item.price" />
+    </div>
+    <div class="col-3 details-header">
+      <span>Currency</span>
+      <input type="text" [(ngModel)]="item && item.currency" />
+    </div>
+  </div>
+
+  <div class="row details-row">
+    <div class="col-3 details-header">
+      <span>Trader</span>
+      <input type="text" [(ngModel)]="item && item.trader" />
+    </div>
+    <div class="col-3 details-header">
+      <span>EV Type</span>
+      <input type="text" [(ngModel)]="item && item.evType" />
+    </div>
+    <div class="col-3 details-header">
+      <span>EV Amount</span>
+      <input type="number" [(ngModel)]="item && item.evAmount" />
+    </div>
+    <div class="col-3 details-header">
+      <span>Interest Type</span>
+      <input type="text" [(ngModel)]="item && item.interestType" />
+    </div>
+  </div>
+
+  <div class="row details-row">
+    <div class="col-3 details-header">
+      <span>Contact</span>
+      <input type="text" [(ngModel)]="item && item.contact" />
+    </div>
+    <div class="col-3 details-header">
+      <span>SettleDate</span>
+      <input type="date" [(ngModel)]="item && item.settleDate" />
+    </div>
+    <div class="col-3 details-header">
+      <span>Firm Account</span>
+      <input type="text" [(ngModel)]="item && item.firmAccount" />
+    </div>
+    <div class="col-3 details-header">
+      <span>Client</span>
+      <input type="text" [(ngModel)]="item && item.client" />
+    </div>
+  </div>
+
+  <div class="row details-row">
+    <div class="col-3 details-header">
+      <span>Cusip</span>
+      <input type="text" [(ngModel)]="item && item.cusip" />
+    </div>
+    <div class="col-3 details-header">
+      <span>Maturity</span>
+      <input type="date" [(ngModel)]="item && item.maturity" />
+    </div>
+  </div>
+</div>
+
+<div class="modal-footer">
+  <div class="details-operations">
+    <button type="button" class="btn btn-secondary" (click)="cancel()">
+      Cancel
+    </button>
+    <button type="button" class="btn btn-primary" (click)="ok()">
+      {{ confirm }}
+    </button>
+  </div>
+</div>

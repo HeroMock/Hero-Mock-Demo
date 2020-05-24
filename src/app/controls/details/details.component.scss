@@ -1,0 +1,19 @@
+.details-row{
+  flex-wrap: nowrap;
+  margin-bottom: 1rem;
+}
+
+.details-header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.details-operations{
+  align-self: flex-end;
+
+  & button {
+    margin: 0.5rem;
+  }
+}
