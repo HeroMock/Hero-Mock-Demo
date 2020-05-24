@@ -1,0 +1,58 @@
+{
+    "trades": [
+        {{#repeat 1000}}
+        {
+            "id": {{@index}},
+            "accountName": "{{firstName}} {{lastName}}",
+            "sales": "{{firstName}} {{lastName}}",
+            "description": "{{lorem 20}}",
+            "tradeDate": "{{date '1900' '2020' 'DD/MM/YYYY'}}",
+            "citiBuySell": "{{title}}",
+            "size": "{{float 200000 90000000000}}",
+            "price": {{float 0 100}},
+            "currency": "{{title}}",
+            "trader": "{{firstName}} {{lastName}}",
+            "evType": "{{title}}",
+            "evAmount": "{{float 0 9000000}}",
+            "interestType": "{{title}}",
+            "contact": "{{firstName}} {{lastName}}",
+            "settleDate": "{{date '1900' '2100' 'DD/MM/YYYY'}}",
+            "firmAccount": "{{firstName}} {{lastName}}",
+            "client": "{{company}}",
+            "cusip": "{{lorem 9}}",
+            "maturity": "{{date '1900' '2100' 'DD/MM/YYYY'}}"
+        }
+        {{/repeat}}
+    ],
+
+    "users": [
+        {{#repeat 100}}
+        {
+            "id": {{@index}},
+            "name": "{{firstName}} {{lastName}}",
+            "company": "{{company}}",
+            "email": "{{email}}",
+            "dob": "{{date '1900' '2000' 'YYYYMMDD'}}",
+            "address": "{{int 10 1000}} {{street}}",
+            "city": "{{city}}",
+            "optedin": {{boolean}},
+            "avatar": "{{@index}}.png",
+            "cellphone": "{{phone "+86 xxx xxxx xxxx"}}"
+        }
+        {{/repeat}}
+    ],
+
+    "feedbacks": [
+        {{#repeat 500}}
+        {
+            "id": {{@index}},
+            "comment": "{{lorem 100}}",
+            "userId": {{int 0 100}},
+            "timestamp": "{{date '2010' '2020' 'YYYYMMDD'}} {{time '06:00' '22:00' 'hh:mm:ss'}}"
+        }
+        {{/repeat}}
+    ],
+
+
+    "profile": { "enableComment": {{boolean}} }
+}

@@ -1,0 +1,27 @@
+{
+   "trades": [
+        {{#repeat 1000}}
+        {
+            "id": {{@index}},
+            "accountName": "{{firstName}} {{lastName}}",
+            "sales": "{{firstName}} {{lastName}}",
+            "description": "{{lorem 20}}",
+            "tradeDate": "{{date '1900' '2020'}}",
+            "citiBuySell": "{{title}}",
+            "size": "{{float 200000 90000000}}",
+            "price": {{float 0 100}},
+            "currency": "{{title}}",
+            "trader": "{{firstName}} {{lastName}}",
+            "evType": "{{title}}",
+            "evAmount": "{{float 0 9000000}}",
+            "interestType": "{{title}}",
+            "contact": "{{firstName}} {{lastName}}",
+            "settleDate": "{{date '1900' '2100'}}",
+            "firmAccount": "{{firstName}} {{lastName}}",
+            "client": "{{company}}",
+            "cusip": "{{lorem 9}}",
+            "maturity": "{{date '1900' '2100'}}"
+        }
+        {{/repeat}}
+    ]
+}
