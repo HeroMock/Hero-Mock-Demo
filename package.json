@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "debug": "ng build && imock start ./mock/mock-server.json"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +25,7 @@
     "ag-grid-angular": "^23.1.1",
     "ag-grid-community": "^23.1.1",
     "bootstrap": "^4.5.0",
+    "reed-mock-server": "0.0.5",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

@@ -5,32 +5,38 @@
         "enabled": true,
         "endpoints": [
             {
-                "urlPrefix": "",
+                "endpoint": "",
                 "indexPages": [
                     "index.html",
                     "index.htm"
                 ],
-                "dirPath": "./static"
+                "dirPath": "./dist/MockHeroDemo"
             }
-        ]        
+        ]
     },
     "serveApi": {
         "enabled": true,
-        "urlPrefix": "/api/ticketing-service",
-        "filePath": "./json-api.hbs"
+        "endpoints": [
+          {
+            "name": "api1",
+            "endpoint": "/api/ticketing-service",
+            "filePath": "./mock/json-api.hbs",
+            "options": {}
+          }
+        ]
     },
     "serveWebsocket": {
         "enabled": true,
         "endpoints": [
             {
                 "endpoint": "/ws1",
-                "filePath": "./json-ws1.hbs",
+                "filePath": "./mock/json-ws1.hbs",
                 "type": "timer",
                 "interval": "500"
             },
             {
                 "endpoint": "/ws2",
-                "filePath": "./json-ws2.hbs",
+                "filePath": "./mock/json-ws2.hbs",
                 "type": "fileWatcher"
             }
         ],
